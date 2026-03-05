@@ -1,0 +1,146 @@
+body {
+	font-family: 'Lucida Sans Unicode', sans-serif; 
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:5px; 
+	margin-left: 5vw;
+	margin-right: 5vw;
+}
+.left-element {
+	animation: fadeIn 1s ease-in-out forwards;
+    /* Styles for the element you want to align to the left */
+}
+.right-element {
+	display: flex;
+    margin-left: auto; /* Push this element to the right */
+    /* Styles for the element you want to align to the right */
+}
+.login_button{
+	width: 120px;
+    height: 50px;
+    display: block;
+	font-size: 18px;
+	font-weight:bold;
+    text-align: center;
+    cursor: pointer;
+    line-height: 20px;
+    color: #FFFFFF;
+	box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.34);
+    background-color: #FF5809;
+    border: 0px solid#000000;
+    transition: all .3s linear;
+	border-radius: 5px;
+	margin: 0px 0px 0px 0px;
+}
+.login_button:hover{
+	background-color: #FF9C4E;
+}
+.home_button{
+	width: 120px;
+    height: 50px;
+    display: block;
+	font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 20px;
+    color: #000000;
+	box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.34);
+    background-color: #FFFFFF;
+    border: 0px solid#000000;
+    transition: all .3s linear;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+.home_button:hover{
+	background-color: #EEEEEE;
+}
+
+.singin_button{
+	width: 120px;
+    height: 50px;
+    display: block;
+	font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 20px;
+    color: #FFF;
+	box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.34);
+    background-color: #FF5809;
+    border: 0px solid#000000;
+    transition: all .3s linear;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+.singin_button:hover{
+	background-color: #FF9C4E;
+}
+
+.left-caption{
+	font-size: 35px;
+	color: #FF5809;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.login_block {
+    display: inline-block;
+    background-color: #F0F0F0;
+    padding: 5vh 25vw;
+    border: 1px solid #CCC;
+    border-radius: 8px;
+    text-align: center;
+    margin: 3vh 3vw; /* 上下 3vh，左右自动居中 */
+}
+
+.write_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Optional: Center-align the items horizontally */
+    }
+
+.write_container input {
+    display: block;
+    margin-bottom: 10px; /* Optional: Add some spacing between the input fields */
+    font-size: 20px; /* Adjust the text size as needed */
+    padding: 5px; /* Adjust the padding as needed */
+    line-height: 30px; /* Adjust the line height as need*/
+	width: 300px;
+}
+
+.title-text{
+	font-size: 35px;
+	margin: 10px 0px 0px 0px;
+}
+.content-text{
+	font-size: 25px;
+	margin: 0px 0px 50px 0px;
+}
+
+#imgcode {
+    cursor: pointer; /* 將滑鼠指針設置為手型，表明可以點擊 */
+}
+
+/* 圖片和文本並排樣式 */
+.captcha-container {
+	display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px; 
+}
+
+#check_word {
+	text-align: center;
+    font-size: 20px; /* Adjust the text size as needed */
+    line-height: 30px; /* Adjust the line height as need*/
+	width: 100px;
+	padding: 2px;
+}

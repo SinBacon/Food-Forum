@@ -1,0 +1,335 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFE4CA; /* 替換為整個網頁的背景顏色值 */
+}
+
+a {
+    text-decoration: none; /* 移除底線 */
+ }
+ 
+#error_block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  flex-direction: column; /* 将子元素垂直排列 */
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  user-select: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#error_pt{
+	position: relative;
+	width: 15vw;
+	height: auto;
+}
+
+.top_block {
+	position: fixed;
+    top: 0;
+    left: 0;
+	z-index: 99;
+    width: 100%;
+	height: 70px;
+    background-color: #FFFFFF;
+    color: #222222;
+    font-family: 'Lucida Sans Unicode', sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+	user-select: none;
+}
+
+.top_block-child_element {
+    display: flex;
+    align-items: center; /* 在垂直方向上居中 */
+ }
+
+.top_block .left {
+    margin-right: auto;
+	margin-left: 5vw;
+}
+
+.top_block .left h1{
+	margin: 0;
+	color: #FF5809;
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.top_block .right {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	margin-right: 5vw;
+}
+
+.top_block .right a{
+	font-size: 20px;
+	color: #222222;
+	margin: 0;
+	font-weight: bold;
+}
+
+.top_block .right a:hover{
+	color: #FF5809;
+}
+
+.top_block .right .profile-user {
+	margin: 0;
+	margin-right: 2vw;
+    width: 35px;
+    height: auto;
+}
+
+.insert_block {
+	position: fixed;
+    bottom: 7vh;
+	right: 3vw;
+	z-index: 99;
+}
+
+#insert_button{
+	position: relative;
+	width: 6vw;
+	height: auto;
+	background-color: #FFF;
+	padding: 1vw;
+	border-radius: 1vw;
+	box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.8); 
+	opacity: 0.7;
+	transition: opacity 0.1s ease;
+}
+
+#insert_button:hover{
+	opacity: 1;
+}
+
+.font-fadeIn {
+    color: #000000;
+	animation: fadeIn 1s ease-in-out forwards;
+}
+
+.content {
+	position: fixed;
+	margin-top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    display: flex;
+	justify-content: center;
+    align-items: top; /* Center vertically */
+}
+
+.content-left {
+	background-color: #FFFFFF;
+	width: 20vw;
+	height: auto;
+	min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.content-right {
+	margin-left: auto;
+	margin-bottom: 70px;
+	margin-right: 0;
+	padding: 5px 30px;
+	width: 80vw;
+	height: auto;
+    overflow-y: auto; /* Enable vertical scrolling for the right column */
+	overflow-x: hidden;
+}
+
+.content-section {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5vh 10vw; /* Optional: Add padding for spacing */
+}
+
+.content-section h3,
+.content-section p {
+    margin: 0;
+}
+
+.post_row1 {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly along the horizontal axis */
+}
+
+.post {
+	width: 100%;
+    margin: 10px 0;
+    padding: 20px 25px;
+    height: auto;
+    background-color: #FFFFFF;
+    box-shadow: 2px 5px 7px -2px rgba(0, 0, 0, 0.34);
+    border-radius: 15px;
+    display: flex;
+    align-items: center; 
+	user-select: none;
+	overflow: hidden; /* 隐藏溢出的内容 */
+}
+
+.post h2 {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.post p {
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+.pt {
+    height: 120px;
+    width: 160px;
+    background-color: #E0E0E0;
+	border-radius: 5px;
+    margin-right: auto;
+}
+
+.post_content {
+    flex: 1;
+}
+
+.poster_info {
+    display: flex;
+    align-items: center;
+	margin-bottom: 15px;
+}
+
+.poster_info p{
+    display: flex;
+    align-items: center; /* 將文字在垂直方向上置中 */
+	margin: 0 10px;
+}
+
+.poster_info img {
+    margin: 0;
+    display: flex;
+	align-items: center; /* 將文字在垂直方向上置中 */
+    width: 30px;
+    height: 30px;
+}
+
+.post-title_content {
+    display: flex;
+    align-items: center;
+	margin-top: 10px;
+	margin-left: 4px;
+	margin-bottom: 0px;
+}
+
+.post-title_content  h2, img.profile-user {
+    margin: 0 0 0 0;
+}
+
+.post-title_content img.profile-user {
+	margin: 0;
+	margin-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.post_content_text_area {
+	width: inherit;
+	margin: 0;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+
+.post_content_text_area p{
+	white-space: pre-wrap;
+	word-break:break-all;
+	text-align: left; /* 文字靠左對齊 */
+}
+
+.post_info {
+    padding: 0;
+	margin: 0;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.like_area {
+	margin:0 0 0 10px;
+}
+
+.post_info p{
+	margin:0 0 0 0;
+	font-size: 16px;
+}
+
+.like-png-ck, .like-png{
+	margin: 0;
+    width: 30px;
+    height: 30px;
+}
+
+.like-png-ck {
+    display: none;
+}
+
+.post_time {
+	display: flex;
+	width: 100%;
+}
+
+.post_time p{
+	margin-left: auto;
+	margin-right: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 30px; /* Adjust the size as needed */
+    height: 30px; /* Adjust the size as needed */
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s ease-in-out;
+}
+
+.image-container img.hidden {
+    opacity: 0;
+}
+
